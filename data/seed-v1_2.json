@@ -1,0 +1,922 @@
+{
+  "assessmentVersion": "disc-2024-english-arabic-v1.2",
+  "sourceWorkbook": "New DISC online(2).xlsx",
+  "sourceSheet": "2024 English - arabic",
+  "sourceSha256": "57b23a2a2b8679ba669e3657d282c053bb26ec6a7da5965388adf6f89dcdaf60",
+  "weights": [
+    4,
+    3,
+    2,
+    1
+  ],
+  "groups": [
+    {
+      "id": "g01",
+      "sequence": 1,
+      "sourceRow": 2,
+      "words": [
+        {
+          "id": "w_d0cf0a55cde559ec",
+          "textEn": "Accurate",
+          "textAr": "دقيق",
+          "dimension": "C",
+          "source": {
+            "enCells": [
+              "A2"
+            ],
+            "arCell": "B2"
+          }
+        },
+        {
+          "id": "w_c7d8c832d6d1006a",
+          "textEn": "Decisive",
+          "textAr": "يتخذ قرار بسهولة",
+          "dimension": "D",
+          "source": {
+            "enCells": [
+              "C2"
+            ],
+            "arCell": "D2"
+          }
+        },
+        {
+          "id": "w_9551a0ccbd25701b",
+          "textEn": "Considerate",
+          "textAr": "يراعي مشاعر الغير",
+          "dimension": "S",
+          "source": {
+            "enCells": [
+              "E2"
+            ],
+            "arCell": "F2"
+          }
+        },
+        {
+          "id": "w_74435bf283c0cb49",
+          "textEn": "Confident",
+          "textAr": "واثق من نفسه",
+          "dimension": "I",
+          "source": {
+            "enCells": [
+              "G2"
+            ],
+            "arCell": "H2"
+          }
+        }
+      ]
+    },
+    {
+      "id": "g02",
+      "sequence": 2,
+      "sourceRow": 4,
+      "words": [
+        {
+          "id": "w_925430a96cb9c23a",
+          "textEn": "Introspective",
+          "textAr": "عميق التفكير والتأمل",
+          "dimension": "C",
+          "source": {
+            "enCells": [
+              "A4"
+            ],
+            "arCell": "B4"
+          }
+        },
+        {
+          "id": "w_0a8cc04ef1ff69de",
+          "textEn": "Strong willed",
+          "textAr": "قوي الإرادة",
+          "dimension": "D",
+          "source": {
+            "enCells": [
+              "C4"
+            ],
+            "arCell": "D4"
+          }
+        },
+        {
+          "id": "w_5d60aafd91a3dd8e",
+          "textEn": "Moderate",
+          "textAr": "معتدل",
+          "dimension": "S",
+          "source": {
+            "enCells": [
+              "E4"
+            ],
+            "arCell": "F4"
+          }
+        },
+        {
+          "id": "w_5a983a18cf581453",
+          "textEn": "Inspiring",
+          "textAr": "يلهم الآخرين",
+          "dimension": "I",
+          "source": {
+            "enCells": [
+              "G4"
+            ],
+            "arCell": "H4"
+          }
+        }
+      ]
+    },
+    {
+      "id": "g03",
+      "sequence": 3,
+      "sourceRow": 6,
+      "words": [
+        {
+          "id": "w_ead3a837c50632dd",
+          "textEn": "Cautious",
+          "textAr": "حذر",
+          "dimension": "C",
+          "source": {
+            "enCells": [
+              "A6"
+            ],
+            "arCell": "B6"
+          }
+        },
+        {
+          "id": "w_6f03b5d7939c3832",
+          "textEn": "Straight-Forward",
+          "textAr": "صريح بدون مجاملة",
+          "dimension": "D",
+          "source": {
+            "enCells": [
+              "C6",
+              "C7"
+            ],
+            "arCell": "D6"
+          }
+        },
+        {
+          "id": "w_50317cf065f5dd88",
+          "textEn": "Generous",
+          "textAr": "معطاء",
+          "dimension": "S",
+          "source": {
+            "enCells": [
+              "E6"
+            ],
+            "arCell": "F6"
+          }
+        },
+        {
+          "id": "w_940076faf67a3577",
+          "textEn": "Charming",
+          "textAr": "جذاب",
+          "dimension": "I",
+          "source": {
+            "enCells": [
+              "G6"
+            ],
+            "arCell": "H6"
+          }
+        }
+      ]
+    },
+    {
+      "id": "g04",
+      "sequence": 4,
+      "sourceRow": 9,
+      "words": [
+        {
+          "id": "w_8a5a8314c80ce7c8",
+          "textEn": "Orderly",
+          "textAr": "مرتب",
+          "dimension": "C",
+          "source": {
+            "enCells": [
+              "A9"
+            ],
+            "arCell": "B9"
+          }
+        },
+        {
+          "id": "w_62353c33a148f18b",
+          "textEn": "Determined",
+          "textAr": "صاحب إصرار عال",
+          "dimension": "D",
+          "source": {
+            "enCells": [
+              "C9"
+            ],
+            "arCell": "D9"
+          }
+        },
+        {
+          "id": "w_70e4af34bc358dce",
+          "textEn": "Neighborly",
+          "textAr": "حسن المعشر",
+          "dimension": "S",
+          "source": {
+            "enCells": [
+              "E9"
+            ],
+            "arCell": "F9"
+          }
+        },
+        {
+          "id": "w_63188476f1fb9adf",
+          "textEn": "Playful",
+          "textAr": "مرح",
+          "dimension": "I",
+          "source": {
+            "enCells": [
+              "G9"
+            ],
+            "arCell": "H9"
+          }
+        }
+      ]
+    },
+    {
+      "id": "g05",
+      "sequence": 5,
+      "sourceRow": 11,
+      "words": [
+        {
+          "id": "w_42cb058a91237b43",
+          "textEn": "Disciplined",
+          "textAr": "منضبط",
+          "dimension": "C",
+          "source": {
+            "enCells": [
+              "A11"
+            ],
+            "arCell": "B11"
+          }
+        },
+        {
+          "id": "w_1ad775592392b5a2",
+          "textEn": "Assertive",
+          "textAr": "حازم",
+          "dimension": "D",
+          "source": {
+            "enCells": [
+              "C11"
+            ],
+            "arCell": "D11"
+          }
+        },
+        {
+          "id": "w_12838064792c77ee",
+          "textEn": "Good Listener",
+          "textAr": "منصت جيد",
+          "dimension": "S",
+          "source": {
+            "enCells": [
+              "E11"
+            ],
+            "arCell": "F11"
+          }
+        },
+        {
+          "id": "w_ad2a4d029e8c3e5d",
+          "textEn": "Cheerful",
+          "textAr": "مبتهج",
+          "dimension": "I",
+          "source": {
+            "enCells": [
+              "G11"
+            ],
+            "arCell": "H11"
+          }
+        }
+      ]
+    },
+    {
+      "id": "g06",
+      "sequence": 6,
+      "sourceRow": 13,
+      "words": [
+        {
+          "id": "w_07eb7fa193f9e000",
+          "textEn": "Soft spoken",
+          "textAr": "مهذب",
+          "dimension": "C",
+          "source": {
+            "enCells": [
+              "A13"
+            ],
+            "arCell": "B13"
+          }
+        },
+        {
+          "id": "w_f563b9e87ca3eba6",
+          "textEn": "Daring",
+          "textAr": "جريء",
+          "dimension": "D",
+          "source": {
+            "enCells": [
+              "C13"
+            ],
+            "arCell": "D13"
+          }
+        },
+        {
+          "id": "w_74ef1fb452de2b3b",
+          "textEn": "Sympathetic",
+          "textAr": "متعاطف",
+          "dimension": "S",
+          "source": {
+            "enCells": [
+              "E13"
+            ],
+            "arCell": "F13"
+          }
+        },
+        {
+          "id": "w_fb6c74982a6773fa",
+          "textEn": "Entertaining",
+          "textAr": "مسلي",
+          "dimension": "I",
+          "source": {
+            "enCells": [
+              "G13"
+            ],
+            "arCell": "H13"
+          }
+        }
+      ]
+    },
+    {
+      "id": "g07",
+      "sequence": 7,
+      "sourceRow": 15,
+      "words": [
+        {
+          "id": "w_71de3e420b0c9034",
+          "textEn": "Careful",
+          "textAr": "محتاط",
+          "dimension": "C",
+          "source": {
+            "enCells": [
+              "A15"
+            ],
+            "arCell": "B15"
+          }
+        },
+        {
+          "id": "w_414a29543f5f0c79",
+          "textEn": "Competitive",
+          "textAr": "يحب التنافس",
+          "dimension": "D",
+          "source": {
+            "enCells": [
+              "C15"
+            ],
+            "arCell": "D15"
+          }
+        },
+        {
+          "id": "w_614f3cbd615c0cbd",
+          "textEn": "Even-tempered",
+          "textAr": "لا يغضب بسرعة",
+          "dimension": "S",
+          "source": {
+            "enCells": [
+              "E15"
+            ],
+            "arCell": "F15"
+          }
+        },
+        {
+          "id": "w_911ed077a39e12a1",
+          "textEn": "Enthusiastic",
+          "textAr": "متحمس",
+          "dimension": "I",
+          "source": {
+            "enCells": [
+              "G15"
+            ],
+            "arCell": "H15"
+          }
+        }
+      ]
+    },
+    {
+      "id": "g08",
+      "sequence": 8,
+      "sourceRow": 17,
+      "words": [
+        {
+          "id": "w_5b7423fe2a00b34a",
+          "textEn": "Controlled",
+          "textAr": "يتحكم بنفسه",
+          "dimension": "C",
+          "source": {
+            "enCells": [
+              "A17"
+            ],
+            "arCell": "B17"
+          }
+        },
+        {
+          "id": "w_59c2ae43662aa4ac",
+          "textEn": "Pioneering",
+          "textAr": "ريادي",
+          "dimension": "D",
+          "source": {
+            "enCells": [
+              "C17"
+            ],
+            "arCell": "D17"
+          }
+        },
+        {
+          "id": "w_1da1193738061787",
+          "textEn": "steady",
+          "textAr": "متزن",
+          "dimension": "S",
+          "source": {
+            "enCells": [
+              "E17"
+            ],
+            "arCell": "F17"
+          }
+        },
+        {
+          "id": "w_d6b29add9df7923e",
+          "textEn": "poised",
+          "textAr": "مستعد",
+          "dimension": "I",
+          "source": {
+            "enCells": [
+              "G17"
+            ],
+            "arCell": "H17"
+          }
+        }
+      ]
+    },
+    {
+      "id": "g09",
+      "sequence": 9,
+      "sourceRow": 19,
+      "words": [
+        {
+          "id": "w_e212c44c65e06b6e",
+          "textEn": "Correct",
+          "textAr": "على حق",
+          "dimension": "C",
+          "source": {
+            "enCells": [
+              "A19"
+            ],
+            "arCell": "B19"
+          }
+        },
+        {
+          "id": "w_3d55137c8421ae01",
+          "textEn": "Daring",
+          "textAr": "جريء",
+          "dimension": "D",
+          "source": {
+            "enCells": [
+              "C19"
+            ],
+            "arCell": "D19"
+          }
+        },
+        {
+          "id": "w_0bbd9d9e94f49af4",
+          "textEn": "Compassionate",
+          "textAr": "متعاطف",
+          "dimension": "S",
+          "source": {
+            "enCells": [
+              "E19"
+            ],
+            "arCell": "F19"
+          }
+        },
+        {
+          "id": "w_c58b03bdde663bf5",
+          "textEn": "Expressive",
+          "textAr": "معبّر",
+          "dimension": "I",
+          "source": {
+            "enCells": [
+              "G19"
+            ],
+            "arCell": "H19"
+          }
+        }
+      ]
+    },
+    {
+      "id": "g10",
+      "sequence": 10,
+      "sourceRow": 21,
+      "words": [
+        {
+          "id": "w_85f943c856604175",
+          "textEn": "Restrained",
+          "textAr": "يكبح عواطفه",
+          "dimension": "C",
+          "source": {
+            "enCells": [
+              "A21"
+            ],
+            "arCell": "B21"
+          }
+        },
+        {
+          "id": "w_3daf3e69aec94080",
+          "textEn": "forceful",
+          "textAr": "يجبر الآخرين",
+          "dimension": "D",
+          "source": {
+            "enCells": [
+              "C21"
+            ],
+            "arCell": "D21"
+          }
+        },
+        {
+          "id": "w_b89c565d8817dc7a",
+          "textEn": "Accommodating",
+          "textAr": "يستوعب الآخرين",
+          "dimension": "S",
+          "source": {
+            "enCells": [
+              "E21"
+            ],
+            "arCell": "F21"
+          }
+        },
+        {
+          "id": "w_105d596c22acf81c",
+          "textEn": "Talkative",
+          "textAr": "متحدث",
+          "dimension": "I",
+          "source": {
+            "enCells": [
+              "G21"
+            ],
+            "arCell": "H21"
+          }
+        }
+      ]
+    },
+    {
+      "id": "g11",
+      "sequence": 11,
+      "sourceRow": 23,
+      "words": [
+        {
+          "id": "w_24630439ee043d57",
+          "textEn": "tactful",
+          "textAr": "مهذب",
+          "dimension": "C",
+          "source": {
+            "enCells": [
+              "A23"
+            ],
+            "arCell": "B23"
+          }
+        },
+        {
+          "id": "w_44af694aee17cfcd",
+          "textEn": "Extroverted",
+          "textAr": "منفتح على الآخرين",
+          "dimension": "D",
+          "source": {
+            "enCells": [
+              "C23"
+            ],
+            "arCell": "D23"
+          }
+        },
+        {
+          "id": "w_b8d61f147d7f4f09",
+          "textEn": "Stable",
+          "textAr": "متزن",
+          "dimension": "S",
+          "source": {
+            "enCells": [
+              "E23"
+            ],
+            "arCell": "F23"
+          }
+        },
+        {
+          "id": "w_f7d59453ea971a6d",
+          "textEn": "persuasive",
+          "textAr": "مقنع",
+          "dimension": "I",
+          "source": {
+            "enCells": [
+              "G23"
+            ],
+            "arCell": "H23"
+          }
+        }
+      ]
+    },
+    {
+      "id": "g12",
+      "sequence": 12,
+      "sourceRow": 25,
+      "words": [
+        {
+          "id": "w_fd379ddaa3769359",
+          "textEn": "Constant",
+          "textAr": "ثابت",
+          "dimension": "C",
+          "source": {
+            "enCells": [
+              "A25"
+            ],
+            "arCell": "B25"
+          }
+        },
+        {
+          "id": "w_0db60b41cca7083b",
+          "textEn": "impatient",
+          "textAr": "مستعجل",
+          "dimension": "D",
+          "source": {
+            "enCells": [
+              "C25"
+            ],
+            "arCell": "D25"
+          }
+        },
+        {
+          "id": "w_53bee3ea1b6a10f4",
+          "textEn": "Cooperative",
+          "textAr": "متعاون",
+          "dimension": "S",
+          "source": {
+            "enCells": [
+              "E25"
+            ],
+            "arCell": "F25"
+          }
+        },
+        {
+          "id": "w_d007bf05f17bf405",
+          "textEn": "Gregarious",
+          "textAr": "اجتماعي",
+          "dimension": "I",
+          "source": {
+            "enCells": [
+              "G25"
+            ],
+            "arCell": "H25"
+          }
+        }
+      ]
+    },
+    {
+      "id": "g13",
+      "sequence": 13,
+      "sourceRow": 27,
+      "words": [
+        {
+          "id": "w_3e495dd1bcda9928",
+          "textEn": "Impartial",
+          "textAr": "موضوعي",
+          "dimension": "C",
+          "source": {
+            "enCells": [
+              "A27"
+            ],
+            "arCell": "B27"
+          }
+        },
+        {
+          "id": "w_e9771fac8d46d11d",
+          "textEn": "Vigorous",
+          "textAr": "نشيط",
+          "dimension": "D",
+          "source": {
+            "enCells": [
+              "C27"
+            ],
+            "arCell": "D27"
+          }
+        },
+        {
+          "id": "w_4a7ef297a12861da",
+          "textEn": "calm",
+          "textAr": "هادئ",
+          "dimension": "S",
+          "source": {
+            "enCells": [
+              "E27"
+            ],
+            "arCell": "F27"
+          }
+        },
+        {
+          "id": "w_e39b94e68dfd8885",
+          "textEn": "Influential",
+          "textAr": "مؤثر",
+          "dimension": "I",
+          "source": {
+            "enCells": [
+              "G27"
+            ],
+            "arCell": "H27"
+          }
+        }
+      ]
+    },
+    {
+      "id": "g14",
+      "sequence": 14,
+      "sourceRow": 29,
+      "words": [
+        {
+          "id": "w_90066bd8e0de5c20",
+          "textEn": "Diplomatic",
+          "textAr": "لبق",
+          "dimension": "C",
+          "source": {
+            "enCells": [
+              "A29"
+            ],
+            "arCell": "B29"
+          }
+        },
+        {
+          "id": "w_33dd23c1f1d59267",
+          "textEn": "Outspoken",
+          "textAr": "صريح",
+          "dimension": "D",
+          "source": {
+            "enCells": [
+              "C29"
+            ],
+            "arCell": "D29"
+          }
+        },
+        {
+          "id": "w_5bb8cb3bb59330c1",
+          "textEn": "accepting",
+          "textAr": "يقبل الآخرين",
+          "dimension": "S",
+          "source": {
+            "enCells": [
+              "E29"
+            ],
+            "arCell": "F29"
+          }
+        },
+        {
+          "id": "w_fd098dde87bd6f18",
+          "textEn": "Friendly",
+          "textAr": "ودود",
+          "dimension": "I",
+          "source": {
+            "enCells": [
+              "G29"
+            ],
+            "arCell": "H29"
+          }
+        }
+      ]
+    }
+  ],
+  "profiles": [
+    {
+      "code": "CD",
+      "sourceRow": 2,
+      "labelAr": "المحقق",
+      "rawP": "investigator",
+      "rawQ": "creative",
+      "rawR": null,
+      "descriptionEn": null,
+      "descriptionAr": "المحقق",
+      "nameAr": "المحقق"
+    },
+    {
+      "code": "CI",
+      "sourceRow": 3,
+      "labelAr": "المقنع بالحقائق",
+      "rawP": null,
+      "rawQ": null,
+      "rawR": null,
+      "descriptionEn": null,
+      "descriptionAr": "المقنع بالحقائق",
+      "nameAr": "المقنع بالحقائق"
+    },
+    {
+      "code": "CS",
+      "sourceRow": 5,
+      "labelAr": "الموضوعي",
+      "rawP": "objective thinker",
+      "rawQ": "perfecionist",
+      "rawR": null,
+      "descriptionEn": null,
+      "descriptionAr": "الموضوعي",
+      "nameAr": "الموضوعي"
+    },
+    {
+      "code": "DI",
+      "sourceRow": 7,
+      "labelAr": "المقنع",
+      "rawP": "persuader",
+      "rawQ": "inspirational",
+      "rawR": "results oriented",
+      "descriptionEn": null,
+      "descriptionAr": "المقنع",
+      "nameAr": "المقنع"
+    },
+    {
+      "code": "DS",
+      "sourceRow": 9,
+      "labelAr": "النتائج بمنهجية",
+      "rawP": null,
+      "rawQ": null,
+      "rawR": null,
+      "descriptionEn": null,
+      "descriptionAr": "النتائج بمنهجية",
+      "nameAr": "النتائج بمنهجية"
+    },
+    {
+      "code": "DC",
+      "sourceRow": 11,
+      "labelAr": "المنجز",
+      "rawP": "acheiver",
+      "rawQ": "investigator",
+      "rawR": "creative",
+      "descriptionEn": null,
+      "descriptionAr": "المنجز",
+      "nameAr": "المنجز"
+    },
+    {
+      "code": "ID",
+      "sourceRow": 13,
+      "labelAr": "الملهم",
+      "rawP": "enthusiasts",
+      "rawQ": "inspirational",
+      "rawR": null,
+      "descriptionEn": null,
+      "descriptionAr": "الملهم",
+      "nameAr": "الملهم"
+    },
+    {
+      "code": "IC",
+      "sourceRow": 15,
+      "labelAr": "المقنع بالحقائق",
+      "rawP": null,
+      "rawQ": null,
+      "rawR": null,
+      "descriptionEn": null,
+      "descriptionAr": "المقنع بالحقائق",
+      "nameAr": "المقنع بالحقائق"
+    },
+    {
+      "code": "IS",
+      "sourceRow": 17,
+      "labelAr": "النشيط",
+      "rawP": "councler",
+      "rawQ": "enthusiasts",
+      "rawR": null,
+      "descriptionEn": null,
+      "descriptionAr": "النشيط",
+      "nameAr": "النشيط"
+    },
+    {
+      "code": "SC",
+      "sourceRow": 19,
+      "labelAr": "المجتهد",
+      "rawP": "practitioner",
+      "rawQ": "objective thinker",
+      "rawR": "perfecionist",
+      "descriptionEn": null,
+      "descriptionAr": "المجتهد",
+      "nameAr": "المجتهد"
+    },
+    {
+      "code": "SD",
+      "sourceRow": 21,
+      "labelAr": "الإنجاز بروية",
+      "rawP": null,
+      "rawQ": null,
+      "rawR": null,
+      "descriptionEn": null,
+      "descriptionAr": "الإنجاز بروية",
+      "nameAr": "الإنجاز بروية"
+    },
+    {
+      "code": "SI",
+      "sourceRow": 23,
+      "labelAr": "الناس أولوية",
+      "rawP": "coach",
+      "rawQ": "councler",
+      "rawR": null,
+      "descriptionEn": null,
+      "descriptionAr": "الناس أولوية",
+      "nameAr": "الناس أولوية"
+    }
+  ],
+  "contentStatus": "Excel N slogans are the accepted short personality names/descriptions.",
+  "scoringPolicyVersion": "score-ties-visible-v2",
+  "profileTextPolicyVersion": "excel-slogan-as-description-v1"
+}

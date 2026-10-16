@@ -1,0 +1,12 @@
+import express from 'express';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import api from './api/index.js';
+import {initDb} from './api/db.js';
+import {hashPassword} from './api/auth.js';
+const dirname=path.dirname(fileURLToPath(import.meta.url));
+const app=express();app.disable('x-powered-by');app.set('trust proxy',1);
+app.use('/api',api);app.use(express.static(path.join(dirname,'dist'),{index:false}));
+app.get(/.*/,(_req,res)=>res.sendFile(path.join(dirname,'dist','index.html')));
+await initDb(hashPassword);
+app.listen(Number(process.env.PORT||10000),'0.0.0.0',()=>console.log('Compass DISC listening'));
