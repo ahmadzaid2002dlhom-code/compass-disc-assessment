@@ -1,0 +1,18 @@
+name: Compass DISC live performance smoke test
+on:
+  pull_request:
+    paths:
+      - 'tests/live-smoke.mjs'
+      - '.github/workflows/live-smoke.yml'
+  workflow_dispatch:
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Test public site, participant registration, persistence, and reports
+        run: node tests/live-smoke.mjs
