@@ -57,36 +57,25 @@ export default function Report({ result, name, back }) {
             )}
           </div>
         </div>
-        {modern ? (
+        {modern && result.profileStatus === 'TIED' ? (
           <div className="profile-summary">
-            {result.profileStatus === 'SINGLE' ? (
-              <>
-                <div className="overline">DESCRIPTION FROM YOUR EXCEL REFERENCE</div>
-                <p className="arabic-description" dir="rtl">
-                  {result.profile?.descriptionAr}
-                </p>
-              </>
-            ) : (
-              <div>
-                <strong>Possible profiles</strong>
-                <div className="candidate-grid">
-                  {candidates.map((p) => (
-                    <div className="candidate" key={p.code}>
-                      <b>{p.code}</b>
-                      <span dir="rtl">{p.descriptionAr}</span>
-                    </div>
-                  ))}
+            <strong>Possible profiles</strong>
+            <div className="candidate-grid">
+              {candidates.map((p) => (
+                <div className="candidate" key={p.code}>
+                  <b>{p.code}</b>
+                  <span dir="rtl">{p.descriptionAr}</span>
                 </div>
-              </div>
-            )}
+              ))}
+            </div>
           </div>
-        ) : (
+        ) : !modern ? (
           <div className="tags">
             {result.keywords?.map((k) => (
               <span key={k}>{k}</span>
             ))}
           </div>
-        )}
+        ) : null}
       </section>
       <div className="two-cols">
         <section className="panel">
