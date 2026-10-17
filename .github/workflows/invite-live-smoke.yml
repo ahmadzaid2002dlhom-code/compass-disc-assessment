@@ -1,0 +1,17 @@
+name: Verify public invitation-only deployment
+on:
+  pull_request:
+    paths:
+      - 'tests/live-invite-smoke.mjs'
+      - '.github/workflows/invite-live-smoke.yml'
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Test public invitation endpoints
+        run: node tests/live-invite-smoke.mjs
