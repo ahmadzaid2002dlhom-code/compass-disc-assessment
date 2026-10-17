@@ -1,4 +1,5 @@
 import {get,put} from '@vercel/blob';
+import {syncStaffCredentials} from './staff-credentials.js';
 
 const FILE=process.env.APP_DATA_PATH || 'disc-assessment-v2/state.json';
 const TOKEN=process.env.BLOB_READ_WRITE_TOKEN;
@@ -43,11 +44,11 @@ export async function writeState(callback){
   previous=job;
   return job;
 }
-export async function initDb(hashPassword){
-  await writeState(async state=>{
-    for(const role of ['facilitator','manager']){
-      const pass=process.env[`STAFF_${role.toUpperCase()}_PASSWORD`];
-      if(pass?.length>=8&&!state.staff_users[role])state.staff_users[role]={password_hash:await hashPassword(pass),role};
-    }
-  });
+export async function initDb(hashPassword,verifyPassword){
+  const status=await writeState(state=>syncStaffCredentials(state,process.env,hashPassword,verifyPassword));
+  console.log('Staff credential configuration:',status.configured.join(', ')||'none',
+    '| updated:',status.updated.join(', ')||'none');
+  if(status.missing.length){
+    console.warn('Staff password variables missing or invalid:',status.missing.join(', '));
+  }
 }
