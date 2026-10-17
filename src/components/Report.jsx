@@ -1,5 +1,5 @@
 import { ArrowLeft, Info } from 'lucide-react';
-import { COLORS, NAMES } from '../lib/disc.js';
+import { NAMES } from '../lib/disc.js';
 import { Btn } from './ui.jsx';
 import Scores from './Scores.jsx';
 
