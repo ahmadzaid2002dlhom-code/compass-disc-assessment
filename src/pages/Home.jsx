@@ -1,5 +1,5 @@
 import { ClipboardList, BarChart3, ArrowRight, ShieldCheck, CheckCircle2 } from 'lucide-react';
-import { COLORS, NAMES } from '../lib/disc.js';
+import { COLORS } from '../lib/disc.js';
 
 export default function Hero({ onStaff }) {
   return (
