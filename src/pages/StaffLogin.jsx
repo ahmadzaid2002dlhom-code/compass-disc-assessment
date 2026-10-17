@@ -1,0 +1,87 @@
+import { useState } from 'react';
+import { ArrowRight, ArrowLeft, ShieldCheck, Eye, EyeOff } from 'lucide-react';
+import { request } from '../lib/api.js';
+import { Btn, ErrorMessage } from '../components/ui.jsx';
+
+export default function Auth({ setMode, onSuccess }) {
+  const [username, setUsername] = useState(''),
+    [password, setPassword] = useState(''),
+    [show, setShow] = useState(false),
+    [busy, setBusy] = useState(false),
+    [error, setError] = useState('');
+  async function submit(e) {
+    e.preventDefault();
+    setBusy(true);
+    setError('');
+    try {
+      await request('login', { username, password });
+      onSuccess();
+    } catch (e) {
+      setError(e.message);
+    } finally {
+      setBusy(false);
+    }
+  }
+  return (
+    <div className="login">
+      <div className="login-side">
+        <ShieldCheck size={42} />
+        <h2>Team management.</h2>
+        <p>
+          Staff access for managers and facilitators. Participants enter through their unique
+          invitation links instead.
+        </p>
+        <div className="login-decoration">
+          D <span>I</span> S <span>C</span>
+        </div>
+      </div>
+      <div className="login-content">
+        <button className="backlink" onClick={() => setMode('home')}>
+          <ArrowLeft size={15} /> Back to overview
+        </button>
+        <div className="overline">STAFF ACCESS</div>
+        <h2>Facilitator / Manager login</h2>
+        <p>
+          Sign in with your staff username and password to create personal invitations and review
+          reports.
+        </p>
+        <form onSubmit={submit}>
+          <label>
+            Staff username
+            <input
+              autoComplete="username"
+              required
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              placeholder="manager or facilitator"
+            />
+          </label>
+          <label>
+            Password
+            <div className="password-row">
+              <input
+                type={show ? 'text' : 'password'}
+                autoComplete="current-password"
+                required
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Enter your staff password"
+              />
+              <button
+                type="button"
+                aria-label={show ? 'Hide password' : 'Show password'}
+                onClick={() => setShow(!show)}
+              >
+                {show ? <EyeOff size={17} /> : <Eye size={17} />}
+              </button>
+            </div>
+          </label>
+          <ErrorMessage error={error} />
+          <Btn type="submit" disabled={busy}>
+            {busy ? 'Please wait…' : 'Sign in to dashboard'} <ArrowRight size={16} />
+          </Btn>
+        </form>
+      </div>
+    </div>
+  );
+}

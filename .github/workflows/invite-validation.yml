@@ -20,6 +20,8 @@ jobs:
           node-version: 22
       - name: Install dependencies
         run: npm install --include=dev --no-audit --no-fund
+      - name: Verify frontend code formatting
+        run: npm run format:check
       - name: Test scoring, authorization, and invitation rules
         run: npm test
       - name: Compile React application
@@ -28,5 +30,6 @@ jobs:
         run: |
           ! grep -q "action==='register'" api/index.js
           grep -q "redeem-invite" api/index.js
-          ! grep -q 'Participant signup' src/main.jsx
-          grep -q '#invite=' src/main.jsx
+          ! grep -q 'Participant signup' src/App.jsx
+          grep -q '#invite=' src/pages/Dashboard.jsx
+          grep -q 'redeem-invite' src/App.jsx
