@@ -4,4 +4,52 @@ import { request } from '../lib/api.js';
 import { Btn, ErrorMessage } from '../components/ui.jsx';
 import Report from '../components/Report.jsx';
 
-export default function TieDemo(){const [result,setResult]=useState(null),[error,setError]=useState('');useEffect(()=>{let active=true;request('tie-demo',null,'GET').then(r=>{if(active)setResult(r.result)}).catch(e=>{if(active)setError(e.message)});return()=>{active=false}},[]);return <><section className="panel" style={{marginBottom:24,borderColor:'#d9d5f9',background:'#f6f5ff'}}><div className="overline">READ-ONLY DEMONSTRATION · تجربة تعادل كامل</div><h2 style={{margin:'0 0 12px'}}>All DISC dimensions tied at 35 points</h2><p style={{lineHeight:1.8,color:'#5e6074',margin:'0 0 14px'}}>This is a demonstration using the real 14-group scoring engine. It does not create a participant account, save answers or affect HR dashboard statistics.</p>{result&&<p style={{margin:'0 0 16px',fontWeight:800}}>D: {result.scores.D} · I: {result.scores.I} · S: {result.scores.S} · C: {result.scores.C} · Total: {result.totalPoints} · {result.candidateProfiles.length} possible profiles</p>}<Btn variant="secondary" onClick={()=>location.assign('/')}><ArrowLeft size={15}/> Back to Compass DISC</Btn></section>{error?<ErrorMessage error={error}/>:result?<Report result={result} name="Test participant (demo)"/>:<p>Calculating the complete tie result…</p>}</>}
+export default function TieDemo() {
+  const [result, setResult] = useState(null),
+    [error, setError] = useState('');
+  useEffect(() => {
+    let active = true;
+    request('tie-demo', null, 'GET')
+      .then((r) => {
+        if (active) setResult(r.result);
+      })
+      .catch((e) => {
+        if (active) setError(e.message);
+      });
+    return () => {
+      active = false;
+    };
+  }, []);
+  return (
+    <>
+      <section
+        className="panel"
+        style={{ marginBottom: 24, borderColor: '#d9d5f9', background: '#f6f5ff' }}
+      >
+        <div className="overline">READ-ONLY DEMONSTRATION · تجربة تعادل كامل</div>
+        <h2 style={{ margin: '0 0 12px' }}>All DISC dimensions tied at 35 points</h2>
+        <p style={{ lineHeight: 1.8, color: '#5e6074', margin: '0 0 14px' }}>
+          This is a demonstration using the real 14-group scoring engine. It does not create a
+          participant account, save answers or affect HR dashboard statistics.
+        </p>
+        {result && (
+          <p style={{ margin: '0 0 16px', fontWeight: 800 }}>
+            D: {result.scores.D} · I: {result.scores.I} · S: {result.scores.S} · C:{' '}
+            {result.scores.C} · Total: {result.totalPoints} · {result.candidateProfiles.length}{' '}
+            possible profiles
+          </p>
+        )}
+        <Btn variant="secondary" onClick={() => location.assign('/')}>
+          <ArrowLeft size={15} /> Back to Compass DISC
+        </Btn>
+      </section>
+      {error ? (
+        <ErrorMessage error={error} />
+      ) : result ? (
+        <Report result={result} name="Test participant (demo)" />
+      ) : (
+        <p>Calculating the complete tie result…</p>
+      )}
+    </>
+  );
+}
