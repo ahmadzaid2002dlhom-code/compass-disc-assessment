@@ -33,3 +33,5 @@ jobs:
           ! grep -q 'Participant signup' src/App.jsx
           grep -q '#invite=' src/pages/Dashboard.jsx
           grep -q 'redeem-invite' src/App.jsx
+          ! grep -q 'DESCRIPTION FROM YOUR EXCEL REFERENCE' src/components/Report.jsx
+          grep -q 'candidate-grid' src/components/Report.jsx
