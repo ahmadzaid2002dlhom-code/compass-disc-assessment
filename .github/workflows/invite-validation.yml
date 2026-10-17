@@ -20,6 +20,8 @@ jobs:
           node-version: 22
       - name: Install dependencies
         run: npm install --include=dev --no-audit --no-fund
+      - name: Verify frontend code formatting
+        run: npm run format:check
       - name: Test scoring, authorization, and invitation rules
         run: npm test
       - name: Compile React application
