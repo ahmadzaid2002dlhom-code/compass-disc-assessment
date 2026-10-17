@@ -1,0 +1,17 @@
+name: Verify live full-tie demo
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/live-tie-preview.yml'
+      - 'tests/live-tie-preview.mjs'
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Verify production 35-point tie and 12 Excel labels
+        run: node tests/live-tie-preview.mjs
