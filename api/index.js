@@ -2,6 +2,7 @@ import express from 'express';
 import {readState,writeState} from './db.js';
 import {fail,verifyPassword,session,authorize,issueSession,endSession,limitLogin,originGuard} from './auth.js';
 import {createInvitation,redeemInvitation} from './invitations.js';
+import {makeFullTieDemo} from './tie-demo.js';
 import {getPublicAssessment,scoreAssessment,validateOne,profileCount,assessmentVersion} from './scoring.js';
 const app=express();app.disable('x-powered-by');app.use(express.json({limit:'32kb'}));
 app.use((req,res,next)=>{res.set({'Cache-Control':'no-store','Referrer-Policy':'no-referrer','X-Content-Type-Options':'nosniff'});try{if(!['GET','HEAD'].includes(req.method))originGuard(req);next();}catch(e){next(e);}});
@@ -10,6 +11,7 @@ const participant=id=>readState(db=>asPublic(db.participants.find(p=>p.id===id),
 const participants=()=>readState(db=>db.participants.filter(p=>p.source==='invited').toSorted((a,b)=>b.createdAt.localeCompare(a.createdAt)).map(p=>asPublic(p,db)));
 app.get('/',async(req,res,next)=>{try{const action=String(req.query.action||'');
  if(action==='health')return res.json({ok:true,assessmentVersion});
+ if(action==='tie-demo')return res.json({demo:true,result:makeFullTieDemo()});
  if(action==='me'){const user=await session(req);if(!user)return res.json({authenticated:false});if(user.principal==='participant'){const p=await participant(user.participant_id);return res.json(p?{authenticated:true,type:'participant',participant:p}:{authenticated:false});}return res.json({authenticated:true,type:'staff',role:user.role,username:user.staff_username});}
  if(action==='assessment'){const s=await authorize(req,'participant');const {p,answers}=await readState(db=>({p:asPublic(db.participants.find(p=>p.id===s.participant_id),db),answers:db.answers[s.participant_id]||{}}));if(!p)fail('Participant not found.',404);if(p.assessmentVersion!==assessmentVersion)fail('The assessment version is no longer available.',409);return res.json({assessment:getPublicAssessment(),status:p.status,answers});}
  if(action==='my-result'){const s=await authorize(req,'participant');const p=await participant(s.participant_id);if(!p)fail('Participant not found.',404);if(!p.result)fail('Assessment not completed.',409);return res.json({name:p.name,result:p.result,completedAt:p.completedAt});}
