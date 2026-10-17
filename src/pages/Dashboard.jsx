@@ -11,7 +11,7 @@ import {
   RefreshCcw,
   Send,
 } from 'lucide-react';
-import { COLORS, NAMES } from '../lib/disc.js';
+import { NAMES } from '../lib/disc.js';
 import { request } from '../lib/api.js';
 import { Btn, ErrorMessage } from '../components/ui.jsx';
 import Scores from '../components/Scores.jsx';
