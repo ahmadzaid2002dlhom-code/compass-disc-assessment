@@ -14,7 +14,7 @@ async function check(label,pathname,{method='GET',body,expected=200,fragment}={}
  }finally{clearTimeout(timeout)}
 }
 try{
- await check('landing page','/',{fragment:'Compass DISC'});
+ await check('landing page','/',{fragment:'Compass · DISC Assessment'});
  const health=await check('health','/api/?action=health');if(!health.ok)throw Error('Health not okay');
  await check('unauthenticated me','/api/?action=me');
  await check('self registration disabled','/api/?action=register',{method:'POST',body:{username:'randomtrial',password:'DemoPass2026!'},expected:404});
