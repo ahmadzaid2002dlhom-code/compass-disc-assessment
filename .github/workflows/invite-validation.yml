@@ -1,0 +1,32 @@
+name: Validate invitation-only DISC
+on:
+  pull_request:
+    paths:
+      - 'src/**'
+      - 'api/**'
+      - 'tests/**'
+      - 'README_RENDER.md'
+      - 'package.json'
+      - '.github/workflows/invite-validation.yml'
+  workflow_dispatch:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install dependencies
+        run: npm install --include=dev --no-audit --no-fund
+      - name: Test scoring, authorization, and invitation rules
+        run: npm test
+      - name: Compile React application
+        run: npm run build
+      - name: Check that participant registration is not exposed
+        run: |
+          ! grep -q "action==='register'" api/index.js
+          grep -q "redeem-invite" api/index.js
+          ! grep -q 'Participant signup' src/main.jsx
+          grep -q '#invite=' src/main.jsx
